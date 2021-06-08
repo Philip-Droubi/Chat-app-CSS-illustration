@@ -1,0 +1,403 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(270, 20%, 96%);
+  padding: 20px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --left-violet: hsl(293, 100%, 63%);
+  --right-violet: hsl(264, 100%, 61%);
+  --simple-booking-P-color: hsl(276, 100%, 81%);
+  --main-heading: hsl(271, 36%, 24%);
+  --message-color: hsl(270, 7%, 64%);
+  --message-box: hsl(275, 100%, 91%);
+  --place-holder-text: hsl(206, 6%, 79%);
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--left-violet), var(--right-violet));
+  border-radius: 12px;
+}
+body::-webkit-scrollbar-track {
+  background-color: hsla(294, 63%, 80%, 0.63);
+}
+.attribution {
+  position: absolute;
+  padding-bottom: 15px;
+  padding-top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  text-align: center;
+  color: rgb(15, 19, 22);
+  width: fit-content;
+  z-index: 0;
+}
+.attribution a {
+  color: hsl(267deg 100% 61%);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+}
+.attribution a:hover {
+  color: var(--main-heading);
+  text-decoration: underline;
+}
+.left-Art {
+  width: 40%;
+  height: 600px;
+  background: linear-gradient(30deg, var(--left-violet), var(--right-violet));
+  position: absolute;
+  top: 0;
+  left: -13%;
+  border-bottom-left-radius: 255px;
+  border-bottom-right-radius: 255px;
+  z-index: -1;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-flex {
+  flex-basis: 50%;
+}
+.left-flex .mobile {
+  width: 55%;
+  min-width: 250px;
+  max-width: 270px;
+  height: 480px;
+  border-radius: 20px;
+  background-color: #eef;
+  box-shadow: 0 0 13px 2px #000000b3;
+  border: 5px solid rgb(34, 34, 34);
+  position: relative;
+  left: 29%;
+  top: 15%;
+  overflow: hidden;
+  z-index: 5;
+}
+.left-flex .mobile .chat::-webkit-scrollbar {
+  width: 5px;
+}
+.left-flex .mobile .chat::-webkit-scrollbar-thumb {
+  background: red;
+}
+.left-flex .mobile .upper-background {
+  height: 75px;
+  background: linear-gradient(90deg, var(--left-violet), var(--right-violet));
+  top: 0;
+  width: 100%;
+  padding: 5px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 3px;
+}
+.left-flex .mobile .upper-background .notch {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 17%;
+  position: absolute;
+  background-color: #eee;
+  top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.left-flex .mobile .upper-background .notch .cam {
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #353535;
+  background-color: black;
+  left: 9%;
+  top: 1px;
+  position: absolute;
+}
+.left-flex .mobile .upper-background .notch .sensor {
+  width: 10px;
+  height: 5px;
+  background-color: #222;
+  right: 15%;
+  top: 3.4px;
+  position: absolute;
+  border-radius: 20px;
+}
+.left-flex .mobile .upper-background .notch .speaker {
+  width: 46px;
+  height: 5px;
+  background-color: #222;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3.4px;
+  position: absolute;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.left-flex .mobile .upper-background i {
+  vertical-align: middle;
+  color: #eee;
+  cursor: pointer;
+  transition: 0.2s;
+  vertical-align: middle;
+  font-size: 30px;
+  z-index: 50;
+}
+.left-flex .mobile .upper-background i:hover {
+  color: var(--right-violet);
+}
+.left-flex .mobile .upper-background img {
+  vertical-align: middle;
+  width: 45px;
+  border-radius: 50%;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.left-flex .mobile .upper-background img:hover {
+  border-color: hsl(305deg 76% 86% / 84%);
+}
+.left-flex .mobile .upper-background .menu {
+  vertical-align: middle;
+  width: 10px;
+  height: fit-content;
+  position: relative;
+  width: 7px;
+  cursor: pointer;
+}
+.left-flex .mobile .upper-background .menu span {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 50%;
+  transition: 0.1s;
+  display: block;
+}
+.left-flex .mobile .upper-background .menu:hover span {
+  background-color: var(--left-violet);
+}
+.left-flex .mobile .upper-background .name {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: -8px;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+}
+.left-flex .mobile .upper-background .name:hover {
+  color: hsl(305deg 76% 86% / 84%);
+}
+.left-flex .mobile .upper-background .name .situation {
+  font-weight: normal;
+}
+.left-flex .mobile .chat {
+  height: 85%;
+  position: relative;
+  overflow-y: scroll;
+}
+.left-flex .mobile .chat::-webkit-scrollbar {
+  width: 4px;
+}
+.left-flex .mobile .chat::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--left-violet), var(--right-violet));
+  border-radius: 12px;
+}
+.left-flex .mobile .chat::-webkit-scrollbar-track {
+  background-color: hsla(294, 63%, 80%, 0.63);
+}
+.left-flex .mobile .chat .chat-msgs {
+  padding: 9px;
+}
+.left-flex .mobile .chat .message {
+  width: 99%;
+  display: block;
+}
+.left-flex .mobile .chat .my-Message {
+  background-color: var(--message-box);
+  margin-bottom: 10px;
+  font-size: 10px;
+  max-width: 65%;
+  width: fit-content;
+  border-radius: 20px;
+  border-bottom-left-radius: 5px;
+  padding: 5px;
+  color: var(--main-heading);
+  clear: both;
+}
+.left-flex .mobile .chat .other-Message-list {
+  text-align: right;
+  margin-top: 10px;
+}
+.left-flex .mobile .chat ul li {
+  list-style: none;
+  display: inline;
+}
+.left-flex .mobile .chat ul li img {
+  border-radius: 5px;
+  width: 19%;
+  display: inline;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.left-flex .mobile .chat .other-Message {
+  background-color: rgb(218 215 215 / 58%);
+  margin-bottom: 10px;
+  font-size: 10px;
+  width: fit-content;
+  max-width: 65%;
+  border-radius: 20px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+  padding-left: 9px;
+  color: var(--main-heading);
+  float: right;
+}
+.left-flex .mobile .chat .price .circle {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid rgba(220, 220, 220, 0.788);
+}
+.left-flex .mobile .chat .price {
+  color: gainsboro;
+  width: 80%;
+  border-radius: 20px;
+  border-bottom-left-radius: 5px;
+  background: linear-gradient(90deg, var(--left-violet), var(--right-violet));
+  padding: 10px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  word-spacing: 0px;
+  position: relative;
+  cursor: pointer;
+}
+.left-flex .mobile .chat .price p {
+  display: inline;
+  position: relative;
+  top: -2px;
+  font-size: 10px;
+}
+.left-flex .mobile .chat .price .num {
+  color: white;
+  float: right;
+  font-weight: 800;
+  font-size: 16px;
+  position: relative;
+  top: -2px;
+}
+.left-flex .mobile .chat .price:hover .circle {
+  background-color: var(--simple-booking-P-color);
+}
+.left-flex .mobile .chat form {
+  position: sticky;
+  bottom: 4px;
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(2.5px);
+  background-color: hsla(295, 53%, 61%, 0.37);
+  border-radius: 11px;
+  border-bottom-right-radius: 0;
+  padding: 5px 4px;
+}
+.left-flex .mobile .chat input[type="text"] {
+  width: 97%;
+  position: relative;
+  letter-spacing: -1px;
+  border-radius: 80px;
+  outline: none;
+  border: 1px solid gray;
+  padding: 3px 14% 3px 8px;
+  color: var(--main-heading);
+}
+.left-flex .mobile .chat input[type="submit"] {
+  right: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  background-color: var(--main-heading);
+  transition: 0.2s;
+}
+.left-flex .mobile .chat input[type="submit"]:hover {
+  background-color: hsl(271, 55%, 17%);
+}
+/*Right flex*/
+.right-flex {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+}
+.right-flex .info {
+  max-width: 400px;
+  top: 52%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.flex .right-flex h3 {
+  color: var(--main-heading);
+  margin-bottom: 15px;
+  letter-spacing: 1.3px;
+  font-size: 35px;
+}
+.flex .right-flex .P {
+  color: #777;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .attribution {
+    position: relative;
+    padding-top: 10px;
+  }
+  .left-flex,
+  .right-flex {
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .left-flex {
+    margin-bottom: 30px;
+    padding: 40px 0;
+    height: 100%;
+  }
+  .left-flex .mobile {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .left-Art {
+    width: 55%;
+  }
+  .flex .right-flex .info {
+    max-width: 450px;
+    position: relative;
+  }
+  .flex .right-flex h3 {
+    text-align: center;
+  }
+  .flex .right-flex p {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
